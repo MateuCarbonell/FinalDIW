@@ -42,10 +42,17 @@ import '../assets/lotus.jpg';
 import '../assets/rb19.jpg';
 import '../assets/w11.jpg';
 import '../assets/alpine521.jpg';
+import '../assets/topcircuitomonaco.jpg';
+import '../assets/topcircuitomonza.jpg';
+import '../assets/topcircuitospa.jpg';
 import '../fonts/helveticanowtext-bold-demo.ttf';
 
 
+// Tooltips
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
+// Mostrar top circuitos
 
 document.getElementById('btnMostrarTopCircuitos').addEventListener('click', function() {
 document.getElementById('spinner').style.display = 'block';
