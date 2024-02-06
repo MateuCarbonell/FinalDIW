@@ -53,17 +53,26 @@ const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 // Mostrar top circuitos
+// Definición de la función iniciarMostrarTopCircuitos
+function iniciarMostrarTopCircuitos() {
+    document.getElementById('spinner').style.display = 'block';
 
-document.getElementById('btnMostrarTopCircuitos').addEventListener('click', function() {
-document.getElementById('spinner').style.display = 'block';
-  
-  
-setTimeout(function() {
-    document.getElementById('spinner').style.display = 'none';
-    mostrarTopCircuitos();
-    }, 1000); 
-});
-  
-function mostrarTopCircuitos() {
-    document.getElementById('topCircuitos').style.display = 'block';
+    setTimeout(function () {
+        document.getElementById('spinner').style.display = 'none';
+        mostrarTopCircuitos();
+    }, 1000);
 }
+
+// Definición de la función mostrarTopCircuitos
+function mostrarTopCircuitos() {
+    document.getElementById('topCircuitos').style.display = 'block';
+}
+
+// Llamada a la función iniciarMostrarTopCircuitos cuando el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', function () {
+    // Agregar el event listener al botón
+    var btnMostrarTopCircuitos = document.getElementById('btnMostrarTopCircuitos');
+    if (btnMostrarTopCircuitos) {
+        btnMostrarTopCircuitos.addEventListener('click', iniciarMostrarTopCircuitos);
+    }
+});
