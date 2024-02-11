@@ -10,3 +10,25 @@
     height: 110px;
     width: 100%;
 }
+
+// modo black
+
+* {
+    transition: background-color 0.5s ease, color 0.5s ease; /* Agregamos la transición para todos los elementos */
+}
+
+#mainBody {
+    background-color: #fff; /* Fondo claro predeterminado */
+    color: #333; /* Texto oscuro predeterminado */
+}
+footer{
+    color: #333;
+}
+
+.dark-mode {
+    background-color: #000 !important; /* Fondo oscuro para todo */
+    color: #fff !important; /* Texto claro */
+}
+
+
+

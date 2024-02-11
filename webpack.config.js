@@ -20,10 +20,6 @@ module.exports = {
       filename: 'topcircuitos.html',
     }),
     new HtmlWebpackPlugin({
-      template: 'src/registro.html',
-      filename: 'registro.html',
-    }),
-    new HtmlWebpackPlugin({
       template: 'src/eras.html',
       filename: 'eras.html',
     }),

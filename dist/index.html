@@ -1,104 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eras</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script defer src="main.js"></script></head>
-<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+  <script defer src="main.js"></script></head>
+
+  <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img class="img-fluid float-start" src="images/F1.png" alt="Logo" style="width: 50px">
-              </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" href="index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="circuitos.html">Circuitos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="topcircuitos.html">Top Circuitos</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" aria-current="page"  role="button" data-bs-toggle="dropdown" aria-expanded="false">Eras de la Formula 1</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="eras.html">V10</a></li>
-                  <li><a class="dropdown-item" href="eras.html">V8</a></li>
-                  <li><a class="dropdown-item" href="eras.html">V6 Hybrid</a></li>
-                </ul>
-              </li>
-            </ul>
-            <button class="btn btn-outline-danger me-2" type="button" data-bs-toggle="modal" data-bs-target="#registerModal">Registrarse</button>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-              <button class="btn btn-outline-danger" type="submit">Buscar</button>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img class="img-fluid float-start" src="images/F1.png" alt="Logo" style="width: 50px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="circuitos.html">Circuitos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="topcircuitos.html">Top Circuitos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" aria-current="page" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Eras de la Formula 1</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="eras.html">V10</a></li>
+                <li><a class="dropdown-item" href="eras.html">V8</a></li>
+                <li><a class="dropdown-item" href="eras.html">V6 Hybrid</a></li>
+              </ul>
+            </li>
+          </ul>
+          <button class="btn btn-outline-danger me-2" type="button" id="btnOscuro"><i
+              class="bi bi-sun-fill"></i></button>
+          <button class="btn btn-outline-danger me-2" type="button" data-bs-toggle="modal"
+            data-bs-target="#registerModal">Registrarse</button>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-danger" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="registerModalLabel">Registro</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="username" class="form-label">Nombre de usuario</label>
+                <input type="text" class="form-control" id="username" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" required>
+              </div>
             </form>
           </div>
-        </div>
-      </nav>
-
-      <!-- Modal -->
-      <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="registerModalLabel">Registro</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="mb-3">
-                  <label for="username" class="form-label">Nombre de usuario</label>
-                  <input type="text" class="form-control" id="username" required>
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Correo electrónico</label>
-                  <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="mb-3">
-                  <label for="password" class="form-label">Contraseña</label>
-                  <input type="password" class="form-control" id="password" required>
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <button type="button" class="btn btn-danger">Registrarse</button>
-            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-danger">Registrarse</button>
           </div>
         </div>
       </div>
+    </div>
+    <div id="mainBody">
+
+
       <div class="d-flex justify-content-center mt-3">
         <div class="d-flex card mb-3" style="max-width: 720px;">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="images/card1.jpg" class="img-fluid rounded-start" style="object-fit: cover; height: 100%;"  alt="...">
+              <img src="images/card1.jpg" class="img-fluid rounded-start" style="object-fit: cover; height: 100%;"
+                alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h4 class="card-title">FIA Federación Internacional del Automóvil  </h4>
+                <h4 class="card-title">FIA Federación Internacional del Automóvil </h4>
 
 
                 <h5>Regulación y Pasión</h5>
-                <p class="card-text">Como la entidad reguladora global, nos dedicamos a garantizar que el automovilismo sea seguro, justo y emocionante. Desde 1904, hemos liderado el camino en la promoción de la excelencia en todas las formas de carreras.</p>
+                <p class="card-text">Como la entidad reguladora global, nos dedicamos a garantizar que el automovilismo
+                  sea seguro, justo y emocionante. Desde 1904, hemos liderado el camino en la promoción de la excelencia
+                  en todas las formas de carreras.</p>
 
                 <h5>F1: Más que una Competición, una Odisea Veloz</h5>
-                <p class="card-text">La F1 es nuestra creación más brillante, donde la velocidad se encuentra con la tecnología de vanguardia. Desde el rugido de los motores hasta la emoción en cada curva, la F1 es el epítome del automovilismo.</p>
+                <p class="card-text">La F1 es nuestra creación más brillante, donde la velocidad se encuentra con la
+                  tecnología de vanguardia. Desde el rugido de los motores hasta la emoción en cada curva, la F1 es el
+                  epítome del automovilismo.</p>
 
                 <h5>Participa en la Emoción</h5>
-                <p class="card-text">Únete a nosotros para vivir la emoción de la F1, con equipos legendarios, pilotos talentosos y eventos que te dejarán sin aliento. Cada carrera es una historia por sí misma, y tú eres parte de ella.</p>
+                <p class="card-text">Únete a nosotros para vivir la emoción de la F1, con equipos legendarios, pilotos
+                  talentosos y eventos que te dejarán sin aliento. Cada carrera es una historia por sí misma, y tú eres
+                  parte de ella.</p>
 
                 <h5>Compromiso: Seguridad y Sostenibilidad, Nuestro Camino a Seguir</h5>
-                <p class="card-text">La seguridad es nuestra prioridad. Establecemos estándares rigurosos y lideramos innovaciones para garantizar que cada carrera sea emocionante y segura. Además, nos esforzamos por un futuro sostenible, explorando prácticas que respeten nuestro planeta.</p>
-              
+                <p class="card-text">La seguridad es nuestra prioridad. Establecemos estándares rigurosos y lideramos
+                  innovaciones para garantizar que cada carrera sea emocionante y segura. Además, nos esforzamos por un
+                  futuro sostenible, explorando prácticas que respeten nuestro planeta.</p>
+
               </div>
             </div>
           </div>
@@ -106,34 +127,38 @@
       </div>
       <div class="d-flex justify-content-center mt-5">
         <h2>Principales Patrocinadores</h2>
-    </div>
-      
+      </div>
+
       <div class="d-flex justify-content-center mt-3">
-        
+
         <img src="images/aws.png" class="img-fluid mr-4" style="max-width: 140px;" alt="Patrocinador 1">
         <img src="images/estrellagalicia.png" class="img-fluid mr-4" style="max-width: 140px;" alt="Patrocinador 2">
         <img src="images/santander.png" class="img-fluid mr-4" style="max-width: 140px;" alt="Patrocinador 3">
         <img src="images/snapdragon.png" class="img-fluid mr-4" style="max-width: 140px;" alt="Patrocinador 4">
+      </div>
+
+
+
+
+      <footer class="footer mt-5 py-3 bg-body-tertiary">
+        <div class="container">
+          <div class="text-center">
+            <p>Consultas y patrocinios, contáctanos:</p>
+            <p>Email: f1website@cifpfbmoll.eu</p>
+          </div>
+          <div class="text-center mt-3">
+            <a href="#" class="bi bi-facebook mx-2"></a>
+            <a href="#" class="bi bi-twitter mx-2"></a>
+            <a href="#" class="bi bi-instagram mx-2"></a>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          <p class="text-muted">© 2024 F1Website | Todos los derechos reservados</p>
+        </div>
+      </footer>
     </div>
+  </body>
+  
 
-      
-    </body>
-    <!-- Footer -->
-<footer class="footer mt-5 py-3 bg-body-tertiary">
-  <div class="container">
-      <div class="text-center">
-          <p>Consultas y patrocinios, contáctanos:</p>
-          <p>Email: f1website@cifpfbmoll.eu</p>
-      </div>
-      <div class="text-center mt-3">
-          <a href="#" class="bi bi-facebook mx-2"></a>
-          <a href="#" class="bi bi-twitter mx-2"></a>
-          <a href="#" class="bi bi-instagram mx-2"></a>
-      </div>
-  </div>
-  <div class="text-center mt-3">
-      <p class="text-muted">© 2024 F1Website | Todos los derechos reservados</p>
-  </div>
-</footer>
 
-</html>
+  </html>

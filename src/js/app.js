@@ -53,7 +53,6 @@ const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 // Mostrar top circuitos
-// Definición de la función iniciarMostrarTopCircuitos
 function iniciarMostrarTopCircuitos() {
     document.getElementById('spinner').style.display = 'block';
 
@@ -63,16 +62,25 @@ function iniciarMostrarTopCircuitos() {
     }, 1000);
 }
 
-// Definición de la función mostrarTopCircuitos
+// función mostrarTopCircuitos que se usa encima
 function mostrarTopCircuitos() {
     document.getElementById('topCircuitos').style.display = 'block';
 }
 
-// Llamada a la función iniciarMostrarTopCircuitos cuando el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function () {
-    // Agregar el event listener al botón
     var btnMostrarTopCircuitos = document.getElementById('btnMostrarTopCircuitos');
     if (btnMostrarTopCircuitos) {
         btnMostrarTopCircuitos.addEventListener('click', iniciarMostrarTopCircuitos);
     }
+});
+
+// Lógica modo oscuro
+
+document.addEventListener('DOMContentLoaded', function () {
+    const btnOscuro = document.getElementById('btnOscuro');
+    const mainBody = document.getElementById('mainBody');
+
+    btnOscuro.addEventListener('click', function () {
+        mainBody.classList.toggle('dark-mode');
+    });
 });
