@@ -52,7 +52,7 @@ import '../fonts/helveticanowtext-bold-demo.ttf';
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-// función mostrarTopCircuitos 
+// Botón Spinner
 document.addEventListener('DOMContentLoaded', function () {
     var btnMostrarTopCircuitos = document.getElementById('btnMostrarTopCircuitos');
     
