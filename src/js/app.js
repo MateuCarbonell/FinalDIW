@@ -53,25 +53,24 @@ const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 // función mostrarTopCircuitos 
-function mostrarTopCircuitos() {
-    document.getElementById('topCircuitos').style.display = 'block';
-}
-
 document.addEventListener('DOMContentLoaded', function () {
     var btnMostrarTopCircuitos = document.getElementById('btnMostrarTopCircuitos');
+    
     if (btnMostrarTopCircuitos) {
-        btnMostrarTopCircuitos.addEventListener('click', iniciarMostrarTopCircuitos);
+        btnMostrarTopCircuitos.addEventListener('click', function () {
+            var spinner = document.getElementById('spinner');
+            var topCircuitos = document.getElementById('topCircuitos');
+
+            spinner.style.display = 'block';
+
+            setTimeout(function () {
+                spinner.style.display = 'none';
+                topCircuitos.style.display = 'block';
+            }, 1000);
+        });
     }
 });
 
-function iniciarMostrarTopCircuitos() {
-    document.getElementById('spinner').style.display = 'block';
-
-    setTimeout(function () {
-        document.getElementById('spinner').style.display = 'none';
-        mostrarTopCircuitos();
-    }, 1000);
-}
 
 
 

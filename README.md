@@ -17,6 +17,8 @@ Este proyecto tiene como objetivo desarrollar una página web informativa dedica
 * Un carrusel visualmente atractivo que exhibe los monoplazas más históricos de cada era motorizada en la F1.
 * Una experiencia visual que destaca la evolución y la historia de los vehículos en este deporte.
 
+
+
 Diseño:
 
 Para el diseño, se ha elegido la combinación de Bootstrap y Webpack. La elección de Bootstrap se fundamenta en mi familiaridad y habilidades superiores en comparación con Material.
@@ -32,3 +34,4 @@ Implementación de Componentes:
 Instrucciones para Configuración del Proyecto:
 
 El proyecto se entregará sin la carpeta "dist". Una vez que el proyecto esté listo (después de ejecutar npm install para las dependencias), se realizará un npm run build. Aunque se proporciona un npm run start, se informa que se han enfrentado problemas con el JS relacionado con la implementación del Spinner. A nivel local, todo funciona correctamente con Live Server.
+
