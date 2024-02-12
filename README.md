@@ -31,3 +31,7 @@ Implementación de Componentes:
 Instrucciones para Configuración del Proyecto:
 
 El proyecto se entregará sin la carpeta "dist". Una vez que el proyecto esté listo (después de ejecutar npm install para las dependencias), se realizará un npm run build. Se proporciona un npm run start para levantarlo en 8080, también se puede usar el LiveServer.
+
+Implementaciones nuevas:
+
+[favicon](https://github.com/jantimon/favicons-webpack-plugin)
