@@ -28,4 +28,4 @@ Implementación de Componentes:
 
 Instrucciones para Configuración del Proyecto:
 
-El proyecto se entregará sin la carpeta "dist". Una vez que el proyecto esté listo (después de ejecutar npm install para las dependencias), se realizará un npm run build. Aunque se proporciona un npm run start, he tenido problemas con implementación del Spinner usando el web server de Webpack. A nivel local, todo funciona correctamente con Live Server.
+El proyecto se entregará sin la carpeta "dist". Una vez que el proyecto esté listo (después de ejecutar npm install para las dependencias), se realizará un npm run build. Se proporciona un npm run start para levantarlo en 8080, también se puede usar el LiveServer.
