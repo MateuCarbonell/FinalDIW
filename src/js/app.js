@@ -74,13 +74,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// Lógica modo oscuro
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     const btnOscuro = document.getElementById('btnOscuro');
-//     const mainBody = document.getElementById('mainBody');
-
-//     btnOscuro.addEventListener('click', function () {
-//         mainBody.classList.toggle('dark-mode');
-//     });
-// });
