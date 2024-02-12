@@ -52,17 +52,7 @@ import '../fonts/helveticanowtext-bold-demo.ttf';
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-// Mostrar top circuitos
-function iniciarMostrarTopCircuitos() {
-    document.getElementById('spinner').style.display = 'block';
-
-    setTimeout(function () {
-        document.getElementById('spinner').style.display = 'none';
-        mostrarTopCircuitos();
-    }, 1000);
-}
-
-// función mostrarTopCircuitos que se usa encima
+// función mostrarTopCircuitos 
 function mostrarTopCircuitos() {
     document.getElementById('topCircuitos').style.display = 'block';
 }
@@ -74,13 +64,24 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+function iniciarMostrarTopCircuitos() {
+    document.getElementById('spinner').style.display = 'block';
+
+    setTimeout(function () {
+        document.getElementById('spinner').style.display = 'none';
+        mostrarTopCircuitos();
+    }, 1000);
+}
+
+
+
 // Lógica modo oscuro
 
-document.addEventListener('DOMContentLoaded', function () {
-    const btnOscuro = document.getElementById('btnOscuro');
-    const mainBody = document.getElementById('mainBody');
+// document.addEventListener('DOMContentLoaded', function () {
+//     const btnOscuro = document.getElementById('btnOscuro');
+//     const mainBody = document.getElementById('mainBody');
 
-    btnOscuro.addEventListener('click', function () {
-        mainBody.classList.toggle('dark-mode');
-    });
-});
+//     btnOscuro.addEventListener('click', function () {
+//         mainBody.classList.toggle('dark-mode');
+//     });
+// });
