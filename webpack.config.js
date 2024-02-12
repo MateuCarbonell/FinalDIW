@@ -2,6 +2,7 @@
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -23,6 +24,12 @@ module.exports = {
       template: 'src/eras.html',
       filename: 'eras.html',
     }),
+    
+    new FaviconsWebpackPlugin({
+      logo: './src/assets/F1.png',
+      outputPath: 'assets/', // Puedes ajustar la carpeta de salida
+    }),
+    
   ],
 
   entry: './src/js/app.js',
@@ -42,12 +49,12 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|ico|gif)$/i,
         use: [
           {
             loader: 'file-loader',
             options: {
-              outputPath: 'images',
+              outputPath: 'assets',
               name: '[name].[ext]',
             },
           },

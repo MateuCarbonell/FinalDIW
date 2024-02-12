@@ -14,6 +14,8 @@
   "devDependencies": {
     "autoprefixer": "^10.4.16",
     "css-loader": "^6.9.0",
+    "favicons": "^7.1.5",
+    "favicons-webpack-plugin": "^6.0.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.6.0",
     "node-sass": "^9.0.0",
